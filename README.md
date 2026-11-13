@@ -58,7 +58,7 @@ Para editar textos, serviços, cores ou links:
 
 - Textos e blocos da landing page: `index.html`
 - Paleta de cores: início de `styles.css` (variáveis `:root`)
-- Links de contato: pesquise `instagram.com/pmv.tech` no código
+- Links de contato: pesquise `instagram.com/pmv_sistemas` no código
 - Dados fictícios, status e valores de exemplo: bloco `EXAMPLES` de `demo.js`
 
 ## Antes de usar comercialmente
