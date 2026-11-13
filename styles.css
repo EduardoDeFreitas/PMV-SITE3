@@ -28,3 +28,5 @@
 /* Balanced services mosaic on every viewport. */
 @media(min-width:901px){.service-card:nth-child(4){grid-column:2/4}}
 @media(min-width:601px) and (max-width:900px){.service-featured{grid-column:1/-1;grid-row:auto;min-height:450px}.service-card:nth-child(4){grid-column:1/-1}}
+
+.briefing-actions{display:flex;flex-wrap:wrap;gap:12px 24px}.briefing-actions a{white-space:nowrap}@media(max-width:640px){.briefing-result{flex-direction:column;align-items:flex-start}}
