@@ -52,7 +52,7 @@ Coloque o projeto na raiz e publique a branch `main` com GitHub Pages selecionan
 
 ## Contato e personalização
 
-O contato oficial presente no site é o Instagram público [@pmv.tech](https://www.instagram.com/pmv.tech/). O formulário de briefing apenas **copia uma mensagem**: o visitante precisa abri-lo no Instagram e enviá-lo manualmente. Nada é transmitido para um servidor da PMV.
+O contato oficial presente no site é o Instagram público [@pmv_sistemas](https://www.instagram.com/pmv_sistemas/). O formulário de briefing apenas **copia uma mensagem**: o visitante precisa abri-lo no Instagram e enviá-lo manualmente. Nada é transmitido para um servidor da PMV.
 
 Para editar textos, serviços, cores ou links:
 
