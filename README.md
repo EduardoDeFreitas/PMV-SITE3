@@ -1,10 +1,10 @@
-# PMV Tech — Site institucional + demonstração interativa
+# PMV Sistemas — Site institucional + demonstração interativa
 
 Site estático em **HTML, CSS e JavaScript**, com visual responsivo, conteúdo em português e demonstração funcional de um painel de orçamentos. Não exige Node, banco de dados, hospedagem paga nem etapas de build.
 
 ## Arquivos
 
-- `index.html` — landing page institucional da PMV Tech
+- `index.html` — landing page institucional da PMV Sistemas
 - `demonstracao.html` — painel ilustrativo e interativo de orçamentos
 - `styles.css` / `main.js` — estilo e interação do site
 - `demo.css` / `demo.js` — estilo e funções do painel
@@ -41,6 +41,14 @@ Se GitHub Pages já estiver configurado para a branch `main`, o novo site dever�
 
 Coloque o projeto na raiz e publique a branch `main` com GitHub Pages selecionando `Deploy from a branch` / `main` / `/ (root)`.
 
+## Novo: animações e PMV Flow Lab
+
+A página inicial agora inclui uma experiência interativa **PMV Flow Lab**, com três cenários fictícios: orçamentos perdidos, agenda desorganizada e tarefas repetitivas. O visitante escolhe um desafio e clica em **Executar simulação** para visualizar uma sequência animada de entendimento, organização e aplicação da tecnologia. Os exemplos são conceituais e **não** representam integrações existentes ou métricas de clientes.
+
+O site também tem animação de entrada de elementos durante a rolagem, barra de progresso de leitura, brilho discreto que segue o mouse, efeito 3D de movimento no painel inicial, cartões com iluminação no hover e movimento suave de elementos de fundo.
+
+**Arquivos adicionados**: `experience.css` e `experience.js`, ambos carregados pela página `index.html`. Não exigem bibliotecas ou instalação. A experiência é responsiva, pode ser utilizada com teclado e respeita `prefers-reduced-motion` (recurso de acessibilidade do sistema operacional). Para desativar as animações novas, retire as duas tags `experience.css`/`experience.js` do `index.html`; o restante do site continua funcionando.
+
 ## Sobre a demonstração
 
 - Os dados iniciais são **inteiramente fictícios**.
@@ -52,7 +60,7 @@ Coloque o projeto na raiz e publique a branch `main` com GitHub Pages selecionan
 
 ## Contato e personalização
 
-O contato oficial presente no site é o Instagram público [@pmv_sistemas](https://www.instagram.com/pmv_sistemas/). O formulário de briefing apenas **copia uma mensagem**: o visitante precisa abri-lo no Instagram e enviá-lo manualmente. Nada é transmitido para um servidor da PMV.
+O contato oficial presente no site é o Instagram público [@pmv_sistemas](https://www.instagram.com/pmv_sistemas/). O formulário de briefing abre o **WhatsApp com a mensagem preparada**, para que o visitante revise e envie manualmente. Nada é transmitido para um servidor da PMV por esse formulário.
 
 Para editar textos, serviços, cores ou links:
 
@@ -67,4 +75,4 @@ A demonstração **não substitui uma solução de produção**. Para armazenar 
 
 ---
 
-**PMV Tech** — tecnologia que move negócios.
+**PMV Sistemas** — tecnologia que move negócios.
