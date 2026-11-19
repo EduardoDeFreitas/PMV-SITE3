@@ -87,3 +87,12 @@ A demonstração **não substitui uma solução de produção**. Para armazenar 
 - Formulário de briefing com validação de tamanho mínimo e anti-spam (campo isca + tempo mínimo).
 - Logo da seção “Sobre” otimizado (`pmv-logo-640.png`) e cores de rótulos pequenos ajustadas para contraste AA.
 - Se o domínio mudar, troque `https://eduardodefreitas.github.io/PMV-SITE3` nas tags `canonical`/`og:*`, no `sitemap.xml`, no `robots.txt` e no `404.html`.
+
+## Animações cinematográficas (`cinema.css` / `cinema.js`)
+
+Duas seções logo após o topo da página inicial, inspiradas em sites "cinematográficos":
+
+- **Jornada (`#jornada`)** — ~2.600 partículas (1.300 no celular) em estilo metal líquido que se transformam conforme a rolagem: gota → sistema → engrenagem → gráfico → logotipo PMV. A câmera "atravessa" um campo de estrelas que acelera com a velocidade da rolagem; títulos entram com desfoque e há uma trilha lateral de progresso. No desktop, as partículas fogem do cursor.
+- **Vitrine (`#vitrine`)** — palco escuro com holofote mostrando três sistemas (agenda, orçamentos e automação). A rolagem aproxima a câmera do sistema central enquanto textos gigantes correm ao fundo em direções opostas (parallax em camadas).
+
+Sem bibliotecas; só anima o que está visível na tela. Para quem ativa "reduzir movimento" no sistema, as seções viram conteúdo estático. Para remover, apague as duas `<section>` e as tags `cinema.css`/`cinema.js` do `index.html`.
