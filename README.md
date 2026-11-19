@@ -76,3 +76,14 @@ A demonstração **não substitui uma solução de produção**. Para armazenar 
 ---
 
 **PMV Sistemas** — tecnologia que move negócios.
+
+## Checklist de lançamento (novembro/2026)
+
+- `privacidade.html` e `termos.html` — Política de Privacidade (LGPD) e Termos de Uso, linkadas no rodapé.
+- `consent.js` — aviso de cookies em todas as páginas; o analytics só carrega se o visitante aceitar. **Para ativar o Google Analytics 4**, preencha `GA4_ID` no topo de `consent.js` com o ID `G-XXXXXXXXXX`.
+- `404.html` — página de erro personalizada (o GitHub Pages usa automaticamente).
+- `sitemap.xml` + `robots.txt` — envie o sitemap no Google Search Console.
+- `assets/og-image.jpg` (prévia ao compartilhar o link) e `assets/apple-touch-icon.png`.
+- Formulário de briefing com validação de tamanho mínimo e anti-spam (campo isca + tempo mínimo).
+- Logo da seção “Sobre” otimizado (`pmv-logo-640.png`) e cores de rótulos pequenos ajustadas para contraste AA.
+- Se o domínio mudar, troque `https://eduardodefreitas.github.io/PMV-SITE3` nas tags `canonical`/`og:*`, no `sitemap.xml`, no `robots.txt` e no `404.html`.
