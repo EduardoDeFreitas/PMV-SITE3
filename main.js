@@ -22,8 +22,12 @@
   // Números de WhatsApp que recebem o briefing (DDI + DDD + número)
   const WHATSAPP_NUMBERS=['5511987244587','5511926115699'];
   const waLink=(num,msg)=>`https://wa.me/${num}?text=${encodeURIComponent(msg)}`;
+  const formStartedAt=Date.now();
   if(form){form.addEventListener('submit', e => {
     e.preventDefault();
+    // Anti-spam: robôs costumam preencher o campo escondido ou enviar instantaneamente.
+    const honeypot=document.querySelector('#brief-website');
+    if ((honeypot && honeypot.value) || Date.now()-formStartedAt<2500) return;
     if (!form.reportValidity()) return;
     const name=document.querySelector('#brief-name').value.trim();
     const type=document.querySelector('#brief-type').value;
