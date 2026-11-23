@@ -36,7 +36,7 @@
     const counter = journey.querySelector('.jn-counter-current');
     const K = chapters.length;
     const mobile = innerWidth < 760;
-    const N = mobile ? 1300 : 2600;
+    const N = mobile ? 650 : 2600;
     const S = 420; // tamanho do quadro de amostragem
 
     // --- Formas: desenhadas num canvas escondido e amostradas em pontos.
@@ -107,17 +107,22 @@
       bucket[i] = Math.floor(Math.random() * 6);
       size[i] = Math.random() < .12 ? 2.4 : 1.4;
     }
+    // Índices agrupados por cor: cada cor percorre só as suas partículas (1 laço em vez de 6).
+    const order = new Uint16Array(N), starts = new Uint16Array(7);
+    for (let i = 0; i < N; i++) starts[bucket[i] + 1]++;
+    for (let b = 1; b < 7; b++) starts[b] += starts[b - 1];
+    { const pos = starts.slice(0, 6); for (let i = 0; i < N; i++) order[pos[bucket[i]]++] = i; }
     // Paleta "cromo + teal + azul" da marca: brilhos claros dão o aspecto metálico.
     const palette = ['#f4fbff', '#bfeee6', '#35e3c4', '#2cc7d6', '#68a8ff', '#8fb6d8'];
 
     // --- Estrelas (efeito de câmera atravessando o espaço)
-    const STARS = mobile ? 90 : 180;
+    const STARS = mobile ? 50 : 180;
     const sx = new Float32Array(STARS), sy = new Float32Array(STARS), sz = new Float32Array(STARS);
     for (let i = 0; i < STARS; i++) { sx[i] = Math.random() * 2 - 1; sy[i] = Math.random() * 2 - 1; sz[i] = Math.random(); }
 
     let W = 0, H = 0, dpr = 1;
     const resize = () => {
-      dpr = Math.min(devicePixelRatio || 1, 1.6);
+      dpr = mobile ? 1 : Math.min(devicePixelRatio || 1, 1.6);
       W = canvas.clientWidth; H = canvas.clientHeight;
       canvas.width = W * dpr; canvas.height = H * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
@@ -172,13 +177,13 @@
       }
 
       // partículas
-      ctx.globalCompositeOperation = 'lighter';
+      if (!mobile) ctx.globalCompositeOperation = 'lighter';
       const liquid = i0 === 0 ? 1 - t : 0; // a gota "respira" como metal líquido
       for (let b = 0; b < palette.length; b++) {
         ctx.fillStyle = palette[b];
         ctx.globalAlpha = b === 0 ? .95 : .75;
-        for (let i = 0; i < N; i++) {
-          if (bucket[i] !== b) continue;
+        for (let k = starts[b], end = starts[b + 1]; k < end; k++) {
+          const i = order[k];
           const ax = A[i * 2], ay = A[i * 2 + 1], bx = B[i * 2], by = B[i * 2 + 1];
           let tx = lerp(ax, bx, t), ty = lerp(ay, by, t);
           // dispersão em profundidade durante a passagem
@@ -221,7 +226,8 @@
     const capB = show.querySelector('.vt-caption-b');
     const light = show.querySelector('.vt-spot');
     const dust = show.querySelector('.vt-dust');
-    let tiltX = 0, tiltY = 0, tx = 0, ty = 0, on = false;
+    let tiltX = 0, tiltY = 0, tx = 0, ty = 0, on = false, lastKey = '', cw = center.offsetWidth;
+    addEventListener('resize', () => { cw = center.offsetWidth; lastKey = ''; }, {passive: true});
 
     if (fine) {
       show.addEventListener('pointermove', e => { tx = (e.clientX / innerWidth - .5) * 10; ty = (e.clientY / innerHeight - .5) * -8; });
@@ -234,11 +240,15 @@
       const late = ease(clamp((p - .5) / .35));     // segunda fase
       const small = innerWidth < 760;
       tiltX = lerp(tiltX, tx, .08); tiltY = lerp(tiltY, ty, .08);
+      // Parado e sem mudança: não reescreve o DOM (evita trabalho a cada quadro).
+      const key = p.toFixed(4) + '|' + tiltX.toFixed(2) + '|' + tiltY.toFixed(2);
+      if (key === lastKey) { if (on) requestAnimationFrame(render); return; }
+      lastKey = key;
 
       // câmera: começa afastada mostrando os três sistemas e aproxima do central
       stage.style.transform = `scale(${lerp(small ? .74 : .72, small ? 1 : 1.08, z)})`;
       center.style.transform = `translate(-50%, calc(-50% - ${late * 17}vh)) perspective(1400px) rotateX(${(1 - z) * 16 + tiltY}deg) rotateY(${tiltX}deg)`;
-      const cw = center.offsetWidth, off = cw * (small ? .5 : .7) + z * cw * .55;
+      const off = cw * (small ? .5 : .7) + z * cw * .55;
       left.style.transform = `translate(calc(-50% - ${off}px), -46%) perspective(1400px) rotateY(${22 + z * 18}deg) scale(.82)`;
       right.style.transform = `translate(calc(-50% + ${off}px), -46%) perspective(1400px) rotateY(${-22 - z * 18}deg) scale(.82)`;
       left.style.opacity = right.style.opacity = String(1 - z * .9);
