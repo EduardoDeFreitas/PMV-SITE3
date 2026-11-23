@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Janis Bull Barbearia · Vila Mariana</title>
+<meta name="description" content="Barbearia na Vila Mariana, São Paulo. Corte, barba e atendimento de primeira. Nota 4,8 no Google.">
+<meta property="og:title" content="Janis Bull Barbearia · Vila Mariana">
+<meta property="og:description" content="Prévia de site criada pela PMV Sistemas para a Janis Bull Barbearia.">
+<meta property="og:image" content="https://eduardodefreitas.github.io/PMV-SITE3/previas/janis-bull/img/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0b0c;--bg2:#141416;--card:#1b1b1e;--ink:#f4f1ea;--muted:#a3a19b;--line:rgba(255,255,255,.1);--gold:#d6a656;--gold2:#f0c97d;--chalk:#e9e6de;--r:16px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font:16px/1.6 Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.display{font-family:'Bebas Neue',Impact,sans-serif;letter-spacing:.02em;font-weight:400}
+
+.pv{background:var(--gold);color:#1a1307;font-size:13px;text-align:center;padding:8px 16px;font-weight:500}
+
+.hd{position:sticky;top:0;z-index:50;background:rgba(11,11,12,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-mark{width:44px;height:44px;border-radius:50%;border:2px solid var(--chalk);display:grid;place-items:center;font:400 22px 'Bebas Neue';letter-spacing:0}
+.logo b{font:400 28px/1 'Bebas Neue';letter-spacing:.06em}
+.logo small{display:block;font-size:9px;letter-spacing:.42em;color:var(--muted);font-weight:700}
+.nav{display:flex;gap:30px;font-size:14px;font-weight:500;color:#cfccc4}
+.nav a:hover{color:var(--gold2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;padding:0 26px;border-radius:999px;font-weight:700;font-size:15px;transition:transform .2s,background .2s,box-shadow .2s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:#1a1307;box-shadow:0 12px 30px rgba(214,166,86,.28)}
+.btn-gold:hover{background:var(--gold2)}
+.btn-line{border:1.5px solid rgba(255,255,255,.35)}
+.btn-wa{background:#25d366;color:#05301a}
+.hd .btn{height:44px;padding:0 20px;font-size:14px}
+
+/* hero */
+.hero{position:relative;min-height:calc(100svh - 106px);display:grid;align-items:end;overflow:hidden;isolation:isolate}
+.hero-bg{position:absolute;inset:-6%;z-index:-2;background:url(img/hero.jpg) center/cover;filter:grayscale(.35) contrast(1.05);transform:translateY(var(--py,0))}
+.hero:before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(11,11,12,.55),rgba(11,11,12,.55) 40%,rgba(11,11,12,.96) 100%)}
+.hero .wrap{padding-bottom:70px}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.28em;color:var(--gold2);text-transform:uppercase}
+.kicker:before{content:'';width:30px;height:2px;background:var(--gold)}
+.hero h1{font:400 clamp(64px,12vw,170px)/.86 'Bebas Neue',Impact,sans-serif;letter-spacing:.01em;margin:16px 0 18px}
+.hero h1 .line>span{color:var(--gold2)}
+.hero h1 .line{display:block}
+.hero h1 .line>span,.hero h1 .line>b{display:block;font-weight:400;animation:up 1s cubic-bezier(.2,.8,.2,1) both}
+.hero h1 .line:nth-child(2)>*{animation-delay:.12s}
+@keyframes up{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+.hero p{max-width:520px;color:#d7d4cc;font-size:18px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero-meta{display:flex;gap:34px;flex-wrap:wrap;margin-top:40px;padding-top:26px;border-top:1px solid var(--line)}
+.hero-meta div{font-size:13px;color:var(--muted)}
+.hero-meta b{display:block;font:400 34px/1 'Bebas Neue';color:var(--ink);letter-spacing:.03em}
+.stars{color:var(--gold2)}
+
+/* faixa */
+.strip{background:var(--chalk);color:#111;overflow:hidden;padding:16px 0;transform:rotate(-1.2deg);margin:-14px 0;position:relative;z-index:2}
+.strip-track{display:flex;width:max-content;animation:mq 26s linear infinite}
+.strip span{font:400 30px/1 'Bebas Neue';letter-spacing:.06em;padding-right:34px;white-space:nowrap;display:inline-flex;align-items:center;gap:34px}
+.strip span:after{content:'✂'}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+section{padding:110px 0}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+h2{font:400 clamp(48px,6.4vw,86px)/.92 'Bebas Neue',Impact,sans-serif;letter-spacing:.015em;margin:12px 0 18px}
+h2 em{font-style:normal;color:var(--gold2)}
+.lead{color:var(--muted);font-size:18px;max-width:560px}
+
+/* serviços */
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:46px}
+.svc{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:transform .35s,border-color .35s}
+.svc:hover{transform:translateY(-6px);border-color:rgba(214,166,86,.5)}
+.svc figure{aspect-ratio:4/4.4;overflow:hidden}
+.svc img{width:100%;height:100%;object-fit:cover;filter:grayscale(.2);transition:transform .8s,filter .5s}
+.svc:hover img{transform:scale(1.07);filter:none}
+.svc div{padding:18px 20px 22px}
+.svc h3{font:400 30px/1 'Bebas Neue';letter-spacing:.03em}
+.svc p{font-size:14px;color:var(--muted);margin-top:6px}
+.svc .n{position:absolute;top:14px;left:14px;font:400 18px 'Bebas Neue';background:rgba(11,11,12,.75);padding:4px 10px;border-radius:8px;color:var(--gold2)}
+.note{font-size:13px;color:var(--muted);margin-top:20px}
+
+/* agendamento */
+.book{background:var(--bg2);border-block:1px solid var(--line)}
+.book-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.step{margin-bottom:24px}
+.step>span{display:block;font-size:12px;font-weight:800;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;margin-bottom:12px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{padding:11px 16px;border-radius:12px;border:1px solid var(--line);background:#222226;font-size:14px;font-weight:600;transition:all .2s}
+.opt:hover{border-color:rgba(214,166,86,.6)}
+.opt.on{background:var(--gold);color:#1a1307;border-color:var(--gold)}
+.opt[disabled]{opacity:.35;cursor:not-allowed;text-decoration:line-through}
+.days{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.day{display:flex;flex-direction:column;align-items:center;padding:10px 0;border-radius:12px;border:1px solid var(--line);background:#222226;font-size:12px;color:var(--muted);transition:all .2s}
+.day b{font:400 26px/1 'Bebas Neue';color:var(--ink)}
+.day.on{background:var(--gold);border-color:var(--gold);color:#1a1307}.day.on b{color:#1a1307}
+.times{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.summary{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:8px;padding-top:20px;border-top:1px solid var(--line)}
+.summary small{color:var(--muted);display:block;font-size:13px}
+.summary b{font-size:16px}
+.summary .btn[aria-disabled="true"]{opacity:.45;pointer-events:none}
+.perks{list-style:none;margin-top:30px;display:grid;gap:14px}
+.perks li{display:flex;gap:14px;align-items:flex-start;color:#d7d4cc}
+.perks i{flex:0 0 34px;height:34px;border-radius:10px;background:rgba(214,166,86,.15);color:var(--gold2);display:grid;place-items:center;font-style:normal}
+
+/* galeria */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:240px;gap:14px;margin-top:40px}
+.gal figure{border-radius:14px;overflow:hidden}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .8s,filter .5s;filter:grayscale(.25)}
+.gal figure:hover img{transform:scale(1.06);filter:none}
+.g1{grid-column:span 2;grid-row:span 2}.g3{grid-row:span 2}
+
+/* depoimentos */
+.rv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.rv{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px;position:relative}
+.rv:before{content:'“';position:absolute;top:-6px;right:20px;font:400 110px/1 'Bebas Neue';color:rgba(214,166,86,.18)}
+.rv p{font-size:17px;line-height:1.55;color:#e9e6de}
+.rv small{display:block;margin-top:16px;color:var(--muted);font-size:13px}
+
+/* visita */
+.visit{display:grid;grid-template-columns:1fr 1.1fr;gap:50px}
+.hours{list-style:none;margin-top:22px;border-top:1px solid var(--line)}
+.hours li{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px}
+.hours li span:last-child{color:var(--muted)}
+.hours li.today,.hours li.today span:last-child{color:var(--gold2);font-weight:700}
+.map{border-radius:var(--r);overflow:hidden;min-height:420px;border:1px solid var(--line)}
+.map iframe{width:100%;height:100%;min-height:420px;border:0;filter:grayscale(1) invert(.92) contrast(.9)}
+
+.final{text-align:center;padding:130px 0;background:radial-gradient(ellipse at center,rgba(214,166,86,.16),transparent 60%)}
+.final h2{font-size:clamp(56px,9vw,130px)}
+.final p{color:var(--muted);max-width:480px;margin:0 auto 30px}
+
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:14px;padding:36px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{color:var(--ink)}
+
+.wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:60;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 14px 34px rgba(0,0,0,.5);animation:pulse 2.6s infinite}
+.wa svg{width:30px;height:30px;fill:#fff}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+.in{opacity:0;transform:translateY(30px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.in.on{opacity:1;transform:none}
+
+@media(max-width:980px){
+  .nav{display:none}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .book-grid,.visit{grid-template-columns:1fr;gap:40px}
+  .rv-grid{grid-template-columns:1fr}
+  .gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:190px}.g3{grid-row:span 1}
+}
+@media(max-width:600px){
+  section{padding:78px 0}
+  .wrap{width:calc(100% - 32px)}
+  .hd .btn span{display:none}.hd .btn{padding:0 16px}
+  .logo b{font-size:24px}
+  .hero .btn{flex:1 1 100%}
+  .hero-meta{gap:22px}
+  .svc-grid{gap:12px}.svc div{padding:12px 14px 16px}.svc h3{font-size:24px}.svc p{font-size:13px}
+  .panel{padding:20px}
+  .days{grid-template-columns:repeat(3,1fr)}
+  .times{grid-template-columns:repeat(4,1fr)}
+  .summary .btn{width:100%}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.in{opacity:1;transform:none}.hero h1 .line>*{transform:none}}
+</style>
+</head>
+<body>
+
+<div class="pv">✦ Prévia criada pela PMV Sistemas para a Janis Bull Barbearia · fotos reais do Google de vocês</div>
+
+<header class="hd">
+  <div class="wrap">
+    <a href="#" class="logo" aria-label="Janis Bull Barbearia"><span class="logo-mark">JB</span><span><b>JANIS BULL</b><small>BARBEARIA</small></span></a>
+    <nav class="nav"><a href="#servicos">Serviços</a><a href="#agendar">Agendar</a><a href="#galeria">Galeria</a><a href="#visite">Onde estamos</a></nav>
+    <a class="btn btn-gold" href="#agendar">✂ <span>Agendar horário</span></a>
+  </div>
+</header>
+
+<section class="hero" style="padding:0">
+  <div class="hero-bg" role="img" aria-label="Salão da Janis Bull Barbearia"></div>
+  <div class="wrap">
+    <span class="kicker">Vila Mariana · São Paulo</span>
+    <h1><span class="line"><b>Seu corte,</b></span><span class="line"><span>do seu jeito.</span></span></h1>
+    <p>Barbearia pequena, descolada e cheia de personalidade. Barbeiros que acertam o corte, ambiente bom e aquela recepção de quem já é de casa.</p>
+    <div class="cta">
+      <a class="btn btn-gold" href="#agendar">Agendar meu horário</a>
+      <a class="btn btn-line" href="#servicos">Ver serviços</a>
+    </div>
+    <div class="hero-meta">
+      <div><b><span class="stars">★</span> 4,8</b>no Google</div>
+      <div><b>340+</b>avaliações</div>
+      <div><b>Seg a Sáb</b>das 10h às 20h</div>
+    </div>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true"><div class="strip-track">
+  <span>Corte</span><span>Barba</span><span>Degradê</span><span>Desenho</span><span>Pigmentação</span><span>Vila Mariana</span><span>Janis Bull</span>
+  <span>Corte</span><span>Barba</span><span>Degradê</span><span>Desenho</span><span>Pigmentação</span><span>Vila Mariana</span><span>Janis Bull</span>
+</div></div>
+
+<section id="servicos">
+  <div class="wrap">
+    <div class="in"><span class="eyebrow">Serviços</span><h2>O que a gente <em>faz bem.</em></h2><p class="lead">Do clássico ao desenhado na navalha. Escolha o serviço e agende em menos de um minuto.</p></div>
+    <div class="svc-grid">
+      <article class="svc in"><span class="n">01</span><figure><img src="img/corte.jpg" alt="Corte degradê com desenho" loading="lazy"></figure><div><h3>Corte</h3><p>Degradê, social, tesoura ou máquina, com acabamento na navalha.</p></div></article>
+      <article class="svc in"><span class="n">02</span><figure><img src="img/barba.jpg" alt="Barba sendo feita" loading="lazy"></figure><div><h3>Barba</h3><p>Toalha quente, navalha e alinhamento perfeito.</p></div></article>
+      <article class="svc in"><span class="n">03</span><figure><img src="img/atendimento.jpg" alt="Barbeiro atendendo cliente" loading="lazy"></figure><div><h3>Corte + Barba</h3><p>O combo completo para sair renovado.</p></div></article>
+      <article class="svc in"><span class="n">04</span><figure><img src="img/equipe.jpg" alt="Equipe da Janis Bull trabalhando" loading="lazy"></figure><div><h3>Desenho & Pigmentação</h3><p>Detalhes na navalha e correção de falhas.</p></div></article>
+    </div>
+    <p class="note">* Serviços de exemplo. No site final entram os serviços, preços e barbeiros de vocês.</p>
+  </div>
+</section>
+
+<section class="book" id="agendar">
+  <div class="wrap book-grid">
+    <div class="in">
+      <span class="eyebrow">Agendamento online</span>
+      <h2>Marque em <em>3 toques.</em></h2>
+      <p class="lead">Escolha o serviço, o dia e o horário. A mensagem já chega pronta no WhatsApp da barbearia, sem ficar esperando resposta.</p>
+      <ul class="perks">
+        <li><i>✓</i><span>Funciona 24h, até de madrugada, quando o cliente lembra que precisa cortar.</span></li>
+        <li><i>✓</i><span>Menos mensagens perguntando “tem horário hoje?”.</span></li>
+        <li><i>✓</i><span>Pode evoluir para agenda com confirmação automática e lembrete.</span></li>
+      </ul>
+    </div>
+    <div class="panel in" id="booker">
+      <div class="step"><span>1 · Serviço</span><div class="opts" data-group="svc">
+        <button class="opt" data-v="Corte">Corte</button><button class="opt" data-v="Barba">Barba</button><button class="opt" data-v="Corte + Barba">Corte + Barba</button><button class="opt" data-v="Desenho/Pigmentação">Desenho</button>
+      </div></div>
+      <div class="step"><span>2 · Dia</span><div class="days" id="days"></div></div>
+      <div class="step"><span>3 · Horário</span><div class="times opts" id="times" data-group="time"></div></div>
+      <div class="summary">
+        <div><small>Seu agendamento</small><b id="sum">Escolha serviço, dia e horário</b></div>
+        <a class="btn btn-wa" id="confirm" aria-disabled="true" href="#" target="_blank" rel="noopener">Confirmar no WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="wrap">
+    <div class="in"><span class="eyebrow">Galeria</span><h2>Por dentro da <em>Janis.</em></h2></div>
+    <div class="gal">
+      <figure class="g1 in"><img src="img/hero.jpg" alt="Salão com bancadas e lousa" loading="lazy"></figure>
+      <figure class="in"><img src="img/fachada.jpg" alt="Fachada da Janis Bull" loading="lazy"></figure>
+      <figure class="g3 in"><img src="img/salao.jpg" alt="Barbeiros trabalhando" loading="lazy"></figure>
+      <figure class="in"><img src="img/barba.jpg" alt="Barba" loading="lazy"></figure>
+      <figure class="in"><img src="img/bone.jpg" alt="Boné da Janis Bull" loading="lazy"></figure>
+      <figure class="in"><img src="img/rua.jpg" alt="Rua da barbearia" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="in"><span class="eyebrow">★ 4,8 no Google</span><h2>Quem senta na cadeira <em>volta.</em></h2></div>
+    <div class="rv-grid">
+      <div class="rv in"><p>“Os barbeiros nunca erram o corte, pode pedir o que for. Ambiente sempre bom e todos os profissionais são excelentes.”</p><small>Cliente · avaliação no Google</small></div>
+      <div class="rv in"><p>“Rapaziada do bem que trabalha muito bem. Barbearia pequena e descolada, com decoração nerd.”</p><small>Cliente · avaliação no Google</small></div>
+      <div class="rv in"><p>“Cliente desde a inauguração: sempre muito bem recebido, e os profissionais são de altíssima qualidade.”</p><small>Cliente · avaliação no Google</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="visite" style="padding-top:0">
+  <div class="wrap visit">
+    <div class="in">
+      <span class="eyebrow">Onde estamos</span>
+      <h2>Na Vila Mariana, <em>Zona Sul de SP.</em></h2>
+      <ul class="hours" id="hours">
+        <li data-d="1"><span>Segunda</span><span>10h às 20h</span></li>
+        <li data-d="2"><span>Terça</span><span>10h às 20h</span></li>
+        <li data-d="3"><span>Quarta</span><span>10h às 20h</span></li>
+        <li data-d="4"><span>Quinta</span><span>10h às 20h</span></li>
+        <li data-d="5"><span>Sexta</span><span>10h às 20h</span></li>
+        <li data-d="6"><span>Sábado</span><span>10h às 20h</span></li>
+        <li data-d="0"><span>Domingo</span><span>Fechado</span></li>
+      </ul>
+      <p style="margin-top:22px">📍 R. Dr. Nicolau de Sousa Queirós, 73 · Vila Mariana, São Paulo</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px">
+        <a class="btn btn-gold" href="#agendar">Agendar</a>
+        <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&destination=Janis+Bull+Barbearia+R.+Dr.+Nicolau+de+Sousa+Queir%C3%B3s+73+Vila+Mariana" target="_blank" rel="noopener">Como chegar</a>
+      </div>
+    </div>
+    <div class="map in"><iframe loading="lazy" title="Mapa da Janis Bull Barbearia" src="https://www.google.com/maps?q=Janis+Bull+Barbearia,+R.+Dr.+Nicolau+de+Sousa+Queir%C3%B3s,+73+-+Vila+Mariana,+S%C3%A3o+Paulo&output=embed"></iframe></div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2 class="in">Bora dar um <em>tapa no visual?</em></h2>
+    <p>Escolha o horário que funciona pra você. A gente cuida do resto.</p>
+    <a class="btn btn-gold" href="#agendar">Agendar agora</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© Janis Bull Barbearia · Vila Mariana, São Paulo</span>
+    <span>Prévia criada por <a href="https://eduardodefreitas.github.io/PMV-SITE3/" target="_blank" rel="noopener">PMV Sistemas</a></span>
+  </div>
+</footer>
+
+<a class="wa" id="wa" href="#" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg></a>
+
+<script>
+var PHONE='5511980150754';
+document.getElementById('wa').href='https://wa.me/'+PHONE+'?text='+encodeURIComponent('Olá! Vim pelo site da Janis Bull e quero agendar um horário ✂️');
+
+// Agendamento: próximos 6 dias de funcionamento (seg a sáb, 10h às 20h)
+var state={svc:null,day:null,time:null};
+var DN=['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
+var daysEl=document.getElementById('days'),timesEl=document.getElementById('times');
+var list=[],d=new Date();
+while(list.length<6){ if(d.getDay()!==0) list.push(new Date(d)); d.setDate(d.getDate()+1); }
+list.forEach(function(dt,i){var b=document.createElement('button');b.className='day';b.innerHTML='<span>'+(i===0&&dt.toDateString()===new Date().toDateString()?'Hoje':DN[dt.getDay()])+'</span><b>'+dt.getDate()+'</b>';
+  b.onclick=function(){state.day=dt;state.time=null;[].forEach.call(daysEl.children,function(x){x.classList.remove('on')});b.classList.add('on');drawTimes();sum()};daysEl.appendChild(b)});
+function drawTimes(){timesEl.innerHTML='';var now=new Date();
+  for(var h=10;h<20;h++){[0,30].forEach(function(m){var t=('0'+h).slice(-2)+':'+(m?'30':'00');var b=document.createElement('button');b.className='opt';b.textContent=t;
+    var dt=new Date(state.day);dt.setHours(h,m,0,0);
+    // horários "ocupados" de exemplo, só para a demonstração parecer real
+    var busy=((h*7+m+state.day.getDate()*3)%5===0);
+    if(dt<now||busy){b.disabled=true}
+    b.onclick=function(){state.time=t;[].forEach.call(timesEl.children,function(x){x.classList.remove('on')});b.classList.add('on');sum()};timesEl.appendChild(b)})}}
+document.querySelectorAll('[data-group="svc"] .opt').forEach(function(b){b.onclick=function(){state.svc=b.dataset.v;b.parentNode.querySelectorAll('.opt').forEach(function(x){x.classList.remove('on')});b.classList.add('on');sum()}});
+function sum(){var s=document.getElementById('sum'),c=document.getElementById('confirm');
+  var parts=[state.svc,state.day?DN[state.day.getDay()]+' '+state.day.getDate()+'/'+(state.day.getMonth()+1):null,state.time].filter(Boolean);
+  s.textContent=parts.length?parts.join(' · '):'Escolha serviço, dia e horário';
+  var ok=state.svc&&state.day&&state.time;c.setAttribute('aria-disabled',ok?'false':'true');
+  if(ok)c.href='https://wa.me/'+PHONE+'?text='+encodeURIComponent('Olá! Quero agendar pela Janis Bull:\n✂️ '+state.svc+'\n📅 '+DN[state.day.getDay()]+', '+state.day.getDate()+'/'+(state.day.getMonth()+1)+'\n⏰ '+state.time+'\nPode confirmar?');}
+(function(){var n=new Date();var first=list[0];var lastSlot=new Date(first);lastSlot.setHours(19,30,0,0);daysEl.children[(first.toDateString()===n.toDateString()&&n>lastSlot)?1:0].click();})();
+
+// Horário de hoje em destaque
+var li=document.querySelector('#hours li[data-d="'+new Date().getDay()+'"]');if(li)li.classList.add('today');
+// Parallax leve no hero (só desktop)
+if(matchMedia('(min-width:900px)').matches&&!matchMedia('(prefers-reduced-motion: reduce)').matches){var bg=document.querySelector('.hero-bg'),tk=false;addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(function(){bg.style.setProperty('--py',(scrollY*.25)+'px');tk=false})}},{passive:true})}
+// Entradas
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.in').forEach(function(el,i){el.style.transitionDelay=(i%4)*90+'ms';io.observe(el)})}else document.querySelectorAll('.in').forEach(function(el){el.classList.add('on')});
+</script>
+</body>
+</html>
