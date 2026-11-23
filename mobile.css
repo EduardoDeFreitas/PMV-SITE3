@@ -1,0 +1,36 @@
+/* PMV — ajustes para celular. Carregado por último no index.html; não altera o desktop. */
+
+/* Botão flutuante de WhatsApp (só aparece em telas pequenas) */
+.wa-float{display:none}
+@media(max-width:760px){
+  .wa-float{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:90;display:flex;align-items:center;gap:8px;height:52px;padding:0 18px 0 14px;border-radius:999px;background:#25d366;color:#05210f;font:800 14px/1 'Manrope',system-ui,sans-serif;text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.08) inset;transition:transform .2s,opacity .3s}
+  .wa-float svg{width:24px;height:24px;flex:0 0 24px}
+  .wa-float:active{transform:scale(.96)}
+  .wa-float.is-hidden{opacity:0;pointer-events:none;transform:translateY(12px)}
+}
+
+@media(max-width:600px){
+  /* Seções com rolagem cinematográfica: menos rolagem para atravessar */
+  .jn{height:340vh}
+  .vt{height:190vh}
+
+  /* Textos legíveis: mínimo de ~11px em rótulos e 15px em parágrafos */
+  .eyebrow,.overline,.jn-label,.jn-kicker,.service-number,.lab-small-label,.vt-caption .overline{font-size:11px;letter-spacing:.14em}
+  .hero-description{font-size:16px;line-height:1.6}
+  .hero-proof span,.hero-bottom span,.hero-bottom-scroll span{font-size:11px}
+  .header-cta{font-size:12px}
+  .section-sidecopy,.lab-heading p,.service-card p,.check-list li,.jn-chapter p{font-size:15px;line-height:1.6}
+  .demo-caveat,.lab-hint,.lab-feedback span,.lab-footer span,.form-lock{font-size:12px;line-height:1.5}
+  .lab-before p,.lab-after p{font-size:13px;line-height:1.5}
+  .lab-control small{font-size:11px}
+  .briefing-form label{font-size:13px}
+  .briefing-form input,.briefing-form select,.briefing-form textarea{font-size:16px} /* evita zoom automático no iPhone */
+
+  /* Áreas de toque confortáveis (mín. 44px) */
+  .site-footer a,.footer-legal a,.primary-nav a{display:inline-flex;align-items:center;min-height:44px}
+  .service-link{min-height:44px;display:inline-flex;align-items:center}
+  .btn{min-height:50px}
+
+  /* Espaço para o botão flutuante não cobrir o rodapé */
+  .site-footer{padding-bottom:84px}
+}
